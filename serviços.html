@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dedetizadora Insect Control</title>
+  <title>Serviços | Insect Control</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -46,15 +46,10 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.05);
     }
 
-    .logo {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-
     h1 {
       color: #1e402f;
       font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .slogan {
@@ -63,49 +58,42 @@
       margin-bottom: 30px;
     }
 
-    .info p {
-      margin: 8px 0;
-      font-size: 1rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .info a {
-      color: #1e402f;
-      text-decoration: none;
-    }
-
-    form {
-      margin-top: 40px;
-      text-align: left;
-    }
-
-    form h2 {
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 3rem;
       color: #1e402f;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
 
-    form button {
-      width: 100%;
-      padding: 12px;
-      background-color: #1e402f;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: not-allowed;
-      opacity: 0.7;
+    .card p {
+      font-size: 0.95rem;
+      color: #666;
     }
 
-    .servicos-btn {
+    .voltar-btn {
       display: inline-block;
       margin-top: 30px;
       padding: 12px 24px;
@@ -117,7 +105,7 @@
       transition: background 0.3s ease;
     }
 
-    .servicos-btn:hover {
+    .voltar-btn:hover {
       background-color: #163426;
     }
 
@@ -149,28 +137,45 @@
 
   <!-- CONTEÚDO PRINCIPAL -->
   <div class="container">
-    <img src="logo.png" alt="Logo Insect Control" class="logo" />
+    <h1>Serviços oferecidos</h1>
+    <p class="slogan">Nós cuidamos da sua casa e comércio, com um serviço de alta qualidade e segurança.</p>
 
-    <h1>Dedetizadora Insect Control</h1>
-    <p class="slogan">"Sua residência livre de pragas."</p>
-
-    <div class="info">
-      <p><i class="fas fa-phone-alt"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/5522999555454" target="_blank">(22) 99955-5454</a></p>
-      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> contato@dedetizadorainsectcontrol.com.br</p>
-      <p><i class="fas fa-map-marker-alt"></i> <strong>Atendemos:</strong> Barra de São João e região</p>
-      <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong> <a href="https://instagram.com/dedetizadorainsectcontrol" target="_blank">@dedetizadorainsectcontrol</a></p>
+    <!-- GRID DE SERVIÇOS -->
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-bug"></i>
+        <h3>Baratas</h3>
+        <p>Eliminação segura e eficaz de baratas em qualquer ambiente, com produtos de qualidade.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-rat"></i>
+        <h3>Ratos</h3>
+        <p>Controle de roedores, com técnicas modernas de prevenção e combate a infestações.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-shield-virus"></i>
+        <h3>Cupins</h3>
+        <p>Tratamento especializado para eliminar cupins em móveis e construções, evitando danos.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-ants"></i>
+        <h3>Formigas</h3>
+        <p>Desinsetização completa para acabar com formigas em todas as áreas da sua casa.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-dove"></i>
+        <h3>Pombos</h3>
+        <p>Controle e remoção de pombos, com sistemas de prevenção de novos animais.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bat"></i>
+        <h3>Morcegos</h3>
+        <p>Remoção ética e vedação de abrigos para impedir a entrada de morcegos em sua residência.</p>
+      </div>
     </div>
 
-    <form id="contato">
-      <h2>Entre em contato</h2>
-      <input type="text" placeholder="Seu nome" required />
-      <input type="email" placeholder="Seu e-mail" required />
-      <input type="tel" placeholder="Seu telefone" />
-      <textarea rows="4" placeholder="Mensagem ou tipo de praga que deseja eliminar"></textarea>
-      <button type="button" disabled>Enviar (visual)</button>
-    </form>
-
-    <a href="servicos.html" class="servicos-btn">Ver todos os serviços</a>
+    <!-- VOLTAR PARA INÍCIO -->
+    <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
   </div>
 
 </body>
